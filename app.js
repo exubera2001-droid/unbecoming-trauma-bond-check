@@ -97,7 +97,7 @@ function render() {
       el('p', 'When care and hurt are tangled together, it can be hard to make sense of the pull. Take a few quiet moments to notice what feels familiar.', 'lead'),
       el('p', 'These questions are for reflection, not a test or diagnosis. You can skip any question. You do not need an account or to tell us your story.'),
     );
-    privacy('Before you begin', 'Your choices stay on this page while it is open; they are not saved or sent to Nora or the community. Leaving or reloading clears them. If someone may check your device, this page may still appear in browser history. Quick exit opens another site but does not erase history.');
+    privacy('Before you begin', 'Your choices stay on this page while it is open; they are not saved or sent to Nora or the community. Leaving or reloading clears them. If someone may check your device, this page may still appear in browser history. Quick Exit replaces this page with a blank screen but does not erase history.');
     actions(button('Begin reflecting  →', () => move(0)), link('Safety & support', '#support'));
   } else if (step < prompts.length) {
     const prompt = prompts[step];
@@ -153,13 +153,17 @@ function render() {
 
 document.getElementById('cover-button').addEventListener('click', () => {
   document.getElementById('cover').hidden = false;
+  document.querySelector('main').inert = true;
+  document.querySelector('.safety-dock').inert = true;
   document.getElementById('uncover-button').focus();
 });
 document.getElementById('uncover-button').addEventListener('click', () => {
   document.getElementById('cover').hidden = true;
+  document.querySelector('main').inert = false;
+  document.querySelector('.safety-dock').inert = false;
   document.getElementById('cover-button').focus();
 });
 document.getElementById('exit-button').addEventListener('click', () => {
-  window.location.replace('https://www.weather.com/');
+  window.location.replace('about:blank');
 });
 render();
