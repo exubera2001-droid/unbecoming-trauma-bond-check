@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="A free, private-to-this-page educational self-reflection about relationship patterns. No account, score, diagnosis, or saved answers.">
+    <meta property="og:title" content="Is this a trauma bond? | Unbecoming">
+    <meta property="og:description" content="A gentle, free self-reflection. Skip any question. No account or saved answers.">
+    <meta property="og:type" content="website">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; connect-src 'none'">
+    <title>Is this a trauma bond? | Unbecoming</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="top">
+        <a class="wordmark" href="./" aria-label="Restart Unbecoming reflection">Unbecoming</a>
+        <a class="top-support" href="#support">Safety &amp; support</a>
+      </header>
+      <div id="check" class="content" aria-live="off"></div>
+      <section id="support" class="support">
+        <span class="eyebrow">You decide what happens next</span>
+        <h2>Safety &amp; support</h2>
+        <p>If you are in immediate danger, contact local emergency services. This page cannot provide emergency help.</p>
+        <div class="resources">
+          <article>
+            <h3>United States</h3>
+            <p>National Domestic Violence Hotline: call <a href="tel:18007997233">800-799-SAFE (7233)</a>, text START to <a href="sms:88788">88788</a>, or visit <a href="https://www.thehotline.org/" rel="noreferrer">thehotline.org</a>.</p>
+          </article>
+          <article>
+            <h3>Outside the United States</h3>
+            <p>The <a href="https://nomoredirectory.org/" rel="noreferrer">NO MORE directory</a> lists local helplines and support organizations.</p>
+          </article>
+          <article>
+            <h3>On a shared device</h3>
+            <p>Browsing history and device access may be visible to others. If it feels safer, consider using a device you trust. Private browsing, Cover, and Quick Exit cannot guarantee privacy.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <div class="safety-dock" aria-label="Screen safety controls">
+      <button type="button" id="cover-button" class="dock-cover">Cover</button>
+      <button type="button" id="exit-button" class="dock-exit">Quick exit <span aria-hidden="true">↗</span></button>
+    </div>
+    <div id="cover" class="cover" role="dialog" aria-modal="true" aria-label="Screen cover" hidden>
+      <div>
+        <h2>A quiet moment.</h2>
+        <p>This cover hides the page while it remains open. It does not erase browser history or activity on this device.</p>
+        <button type="button" id="uncover-button" class="button secondary">Return to page</button>
+      </div>
+    </div>
+  </body>
+</html>
